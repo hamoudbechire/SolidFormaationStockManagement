@@ -6,10 +6,11 @@ namespace StockManagement
   public  interface IProductService
     {
 
-         bool AddProduct(Product product);
-        bool ModifyProduct(Product product);
-        bool DeleteProduct(int productId);
-        IEnumerable<Product> GetProductList();
-        IEnumerable<Product> GetProductByCategory(int categoryId);
+        void AddProduct(Product product);
+        void ModifyProduct(Product product);
+        void DeleteProduct(int productId);
+        List<Product> GetProductList();                 
+        List<Product> GetProductByCategory(int categoryId);
+        Product GetProductById(int categoryId);
     }
 }

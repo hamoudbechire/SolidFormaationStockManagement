@@ -8,9 +8,15 @@ namespace StockManagement
 {
   public  class Incoming 
     {
+        public static List<Incoming> ListIncoming = new List<Incoming>();
         public int Id { get; }
-        public int IncomingDate { get; }
+        public DateTime IncomingDate { get; }
 
-        public IEnumerable<IncomingLine> incomingLines { get; set; }
+        //public IEnumerable<IncomingLine> incomingLines { get; set; }
+        public Incoming(int id,DateTime incomingDate)
+        {
+            this.Id = id;
+            this.IncomingDate = incomingDate;
+        }
     }
 }

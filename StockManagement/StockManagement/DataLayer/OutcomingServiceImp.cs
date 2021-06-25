@@ -8,9 +8,15 @@ namespace StockManagement
 {
     public class OutcomingServiceImp : IOutcomingService
     {
-        public bool AddOutcoming(Outcoming outcoming)
+        public void AddOutcoming(Outcoming outcoming)
         {
-            throw new NotImplementedException();
+            Outcoming.ListOutcoming.Add(outcoming);
+            Console.WriteLine("Outcoming Added");
+        }
+
+        public List<Outcoming> GetOutcomingList()
+        {
+            return Outcoming.ListOutcoming;
         }
     }
 }

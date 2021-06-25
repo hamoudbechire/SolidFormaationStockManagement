@@ -9,6 +9,8 @@ namespace StockManagement
     interface IIncomingService
     {
 
-        bool AddIncoming(Incoming incoming);
+        void AddIncoming(Incoming incoming);
+        List<Incoming> GetIncomingList();
+        
     }
 }

@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLayer\CategoryImp.cs" />
+    <Compile Include="DataLayer\OutcomingLineServiceImp.cs" />
+    <Compile Include="DataLayer\IOutcomingLineService.cs" />
+    <Compile Include="DataLayer\IIncomingLineService.cs" />
     <Compile Include="DataLayer\IIncomingService.cs" />
     <Compile Include="DataLayer\IInvoiceService.cs" />
+    <Compile Include="DataLayer\IncomingLineServiceImp.cs" />
     <Compile Include="DataLayer\IncomingServiceImp.cs" />
     <Compile Include="DataLayer\InvoiceServiceImp.cs" />
     <Compile Include="DataLayer\IOrderService.cs" />

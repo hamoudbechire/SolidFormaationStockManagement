@@ -8,29 +8,40 @@ namespace StockManagement
 {
     public class ProductServiceImp : IProductService
     {
-        public bool AddProduct(Product product)
+        public void AddProduct(Product product)
         {
-            throw new NotImplementedException();
+            Product.ListProduct.Add(product);
+            Console.WriteLine("Product Added");
         }
 
-        public bool DeleteProduct(int productId)
+        public void DeleteProduct(int productId)
         {
-            throw new NotImplementedException();
+            var item = GetProductById(productId);
+            Product.ListProduct.Remove(item);
+            Console.WriteLine("Product removed");
         }
 
-        public IEnumerable<Product> GetProductByCategory(int categoryId)
+        public List<Product> GetProductByCategory(int categoryId)
         {
-            throw new NotImplementedException();
+            return Product.ListProduct.Where(p => p.Category.Id == categoryId).ToList();
         }
 
-        public IEnumerable<Product> GetProductList()
+        public Product GetProductById(int id)
         {
-            throw new NotImplementedException();
+            return Product.ListProduct.Where(p => p.Id == id).FirstOrDefault();
         }
 
-        public bool ModifyProduct(Product product)
+        public List<Product> GetProductList()
         {
-            throw new NotImplementedException();
+            return Product.ListProduct;
+        }
+
+        public void ModifyProduct(Product product)
+        {
+            var item = GetProductById(product.Id);
+            var index = Product.ListProduct.IndexOf(item);
+            Product.ListProduct[index] = product;
+            Console.WriteLine("Product Updated " + Category.ListCategory.Count);
         }
     }
 }

@@ -10,6 +10,6 @@ namespace StockManagement
     {
         Order PassOrder(Order order);
         bool ModifyOrderStatus(Order order);
-        IEnumerable<Order> GetOrderList();
+        List<Order> GetOrderList();
     }
 }

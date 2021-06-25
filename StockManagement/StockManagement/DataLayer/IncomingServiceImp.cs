@@ -8,9 +8,15 @@ namespace StockManagement
 {
     class IncomingServiceImp : IIncomingService
     {
-        public bool AddIncoming(Incoming incoming)
+        public void AddIncoming(Incoming incoming)
         {
-            throw new NotImplementedException();
+            Incoming.ListIncoming.Add(incoming);
+            Console.WriteLine("Incoming Added");
+        }
+
+        public List<Incoming> GetIncomingList()
+        {
+            return Incoming.ListIncoming;
         }
     }
 }

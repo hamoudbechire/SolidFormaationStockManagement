@@ -8,6 +8,7 @@ namespace StockManagement
 {
     interface IOutcomingService
     {
-        bool AddOutcoming(Outcoming outcoming);
+        void AddOutcoming(Outcoming outcoming);
+        List<Outcoming> GetOutcomingList();
     }
 }

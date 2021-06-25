@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace StockManagement
 {
-    interface ICategory
+    public   interface ICategory
     {
 
-        bool AddCategory(Category category);
-        bool ModifyCategory(Category category);
-        bool DeleteCategory(int categoryId);
-        bool GetCategoryList(int categoryId);
+          void AddCategory(Category category);
+          void ModifyCategory(Category category);
+          void DeleteCategory(int categoryId);
+          List<Category> GetCategoryList();
+          Category GetCategoryById(int id);
     }
 }

@@ -8,7 +8,7 @@ namespace StockManagement
 {
     class OrderServiceImp : IOrderService
     {
-        public IEnumerable<Order> GetOrderList()
+        public List<Order> GetOrderList()
         {
             throw new NotImplementedException();
         }
